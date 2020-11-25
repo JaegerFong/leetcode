@@ -6,8 +6,8 @@ import (
 )
 
 func main(){
-	pre := []int{3,9,20,15,7}
+	post := []int{9,15,7,20,3}
 	in := []int{9,3,15,20,7}
-	tree := binary_tree.BuildBy(pre,in)
+	tree := binary_tree.BuildByPostAndIn(in,post)
 	fmt.Println(tree.Right.Left.Val)
 }

@@ -16,11 +16,7 @@ import (
 //
 // Related Topics 树 深度优先搜索 数组
 
-func buildTree(preorder []int, inorder []int)*TreeNode{
-	return BuildBy(preorder,inorder)
-}
-
-func BuildBy(preorder []int, inorder []int)*TreeNode{
+func BuildByPreAndIn(preorder []int, inorder []int)*TreeNode{
 	if len(preorder) == 0 || len(inorder) == 0{
 		return nil
 	}
@@ -31,8 +27,8 @@ func BuildBy(preorder []int, inorder []int)*TreeNode{
 
 	leftPreOrder,leftInOrder,rightPreOrder,rightInOrder := preInOrder(preorder,inorder)
 
-	node.Left = buildTree(leftPreOrder,leftInOrder)
-	node.Right = buildTree(rightPreOrder,rightInOrder)
+	node.Left = BuildByPreAndIn(leftPreOrder,leftInOrder)
+	node.Right = BuildByPreAndIn(rightPreOrder,rightInOrder)
 
 	return node
 }
