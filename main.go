@@ -1,7 +1,13 @@
 package main
 
-import "leetcode/binary_tree"
+import (
+	"fmt"
+	"leetcode/binary_tree"
+)
 
 func main(){
-	binary_tree.ConstructMaximumBinaryTree([]int{3,2,1,6,0,5})
+	pre := []int{3,9,20,15,7}
+	in := []int{9,3,15,20,7}
+	tree := binary_tree.BuildBy(pre,in)
+	fmt.Println(tree.Right.Left.Val)
 }
