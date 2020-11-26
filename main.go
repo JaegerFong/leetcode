@@ -12,7 +12,5 @@ func main(){
 	in := []int{4,2,1,4,2,3,4}
 	tree := binary_tree.BuildByPostAndIn(in,post)
 
-	repeat := binary_tree.FindDuplicateSubtrees(tree)
-	fmt.Println(repeat[0])
-	fmt.Println(repeat[1])
+	fmt.Println(binary_tree.DfsDep(tree))
 }
