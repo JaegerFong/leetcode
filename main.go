@@ -5,6 +5,14 @@ import (
 	"leetcode/binary_tree"
 )
 
+//         1
+//       / \
+//      2   3
+//     /   / \
+//    4   2   4
+//       /
+//      4
+
 func main(){
 	//post := []int{9,15,7,20,3}
 	//in := []int{9,3,15,20,7}
@@ -12,5 +20,6 @@ func main(){
 	in := []int{4,2,1,4,2,3,4}
 	tree := binary_tree.BuildByPostAndIn(in,post)
 
-	fmt.Println(binary_tree.DfsDep(tree))
+	k := binary_tree.Mirror(tree)
+	fmt.Println(k.Left.Left)
 }
