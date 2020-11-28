@@ -9,34 +9,26 @@ func mergeTrees(t1 *TreeNode, t2 *TreeNode) *TreeNode {
 		return nil
 	}
 
-	if t1 == nil {
-		t1 = t2
+	node := new(TreeNode)
+	// 其中一个为nil
+	if t1 == nil && t2 != nil {
+		node.Val = t2.Val
+		node.Left = t2.Left
+		node.Right = t2.Right
+		return node
 	}
 
-	if t2 == nil{
-
+	if t2 == nil && t1 != nil {
+		node.Val = t1.Val
+		node.Left = t1.Left
+		node.Right = t1.Right
+		return node
 	}
 
-	t1.Val = t1.Val + t2.Val
-	t1.Left = mergeTrees(t1.Left,t2.Left)
-	t1.Right = mergeTrees(t1.Right,t2.Right)
 
-	return t1
-}
+	node.Val = t1.Val + t2.Val
+	node.Left = mergeTrees(t1.Left,t2.Left)
+	node.Right = mergeTrees(t1.Right,t2.Right)
 
-func preorderTwo(n1,n2 *TreeNode){
-
-
-	/*
-
-	1. n1 == nil && n2 == nil | return
-	2. n1 == nil 以n2为准
-	3. n2 == nil 以n1为准
-	4. n1 n2 !=nil n1.Val = n1.Val + n2.Val
-
-	preorderTwo(n1.Left,n2.Left)
-	preorderTwo(n1.Right,n2.Right)
-
-	*/
-
+	return node
 }
