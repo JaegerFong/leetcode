@@ -21,6 +21,7 @@ import (
 
 // 后续：4,5,2,6,3,1
 // 中序：4,2,5,1,6,3
+var pathSum int
 
 func main() {
 	//post := []int{9,15,7,20,3}
@@ -30,6 +31,7 @@ func main() {
 	post := []int{4, 5, 2, 6, 3, 1}
 	in := []int{4, 2, 5, 1, 6, 3}
 	tree := binary_tree.BuildByPostAndIn(in, post)
-	c := binary_tree.CountNodes(tree)
+	pathSum = 0
+	c := binary_tree.MaxPathSum(tree)
 	fmt.Println(c)
 }
