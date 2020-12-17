@@ -1,6 +1,6 @@
 package link_list
 
-// 拿到节点的前一个节点赋值：node.Next = front
+// 拿到节点的前一个节点赋值：node.Next = front 1234567890
 // loop(head.Next) => head==nil head.Next
 
 func reverseList(head *ListNode) *ListNode {
