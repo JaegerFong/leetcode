@@ -11,6 +11,13 @@ func TestReverseList(t *testing.T) {
 	fmt.Println(reverseList)
 }
 
+func TestReverseRecursion(t *testing.T) {
+	list := Generate([]int{1, 2, 3, 4, 5, 6, 7})
+	l := list.Next
+	reverseList := reverseListRecursion(l)
+	fmt.Println(reverseList)
+}
+
 func TestReverseNList(t *testing.T) {
 	list := Generate([]int{1, 2, 3, 4, 5, 6, 7})
 	l := list.Next
