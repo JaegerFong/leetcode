@@ -1,16 +1,10 @@
 package link_list
 
-// 反转链表的前n个节点
-var head *ListNode
-
-func reverseN(list *ListNode, n int) *ListNode {
-	if n == 1 {
-		head = list.Next
-		return list
+func reverseMNList(list *ListNode, m, n int) *ListNode {
+	if m == 1 {
+		return reverseN(list, n)
 	}
 
-	last := reverseN(list.Next, n-1)
-	list.Next.Next = list
-	list.Next = nil
-	return last
+	list.Next = reverseMNList(list.Next, m-1, n-1)
+	return list
 }
