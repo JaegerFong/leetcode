@@ -31,3 +31,10 @@ func TestReverseMNList(t *testing.T) {
 	reverseMN := reverseMNList(l, 3, 6)
 	fmt.Println(reverseMN)
 }
+
+func TestAdd2Num(t *testing.T) {
+	l1 := Generate([]int{4, 2, 3})
+	l2 := Generate([]int{2, 1})
+	l := addTwoNumbers(l1.Next, l2.Next)
+	fmt.Println(l)
+}
