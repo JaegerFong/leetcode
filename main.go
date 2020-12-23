@@ -32,7 +32,8 @@ func main() {
 	in := []int{4, 2, 5, 1, 6, 3}
 	tree := binary_tree.BuildByPostAndIn(in, post)
 	pathSum = 0
-	c := binary_tree.MaxPathSum(tree)
+	//c := binary_tree.MaxPathSum(tree)
 
+	c := binary_tree.LevelOrderBottom(tree)
 	fmt.Println(c)
 }
