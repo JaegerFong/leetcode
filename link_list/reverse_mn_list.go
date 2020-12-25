@@ -1,5 +1,6 @@
 package link_list
 
+// nothing
 func reverseMNList(list *ListNode, m, n int) *ListNode {
 	if m == 1 {
 		return reverseN(list, n)
