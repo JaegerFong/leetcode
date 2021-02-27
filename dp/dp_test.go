@@ -11,10 +11,11 @@ func TestCoinChange(t *testing.T) {
 	fmt.Println(coinChange2(coins, amount))
 }
 
-func TestDpFib2(t *testing.T) {
-	fmt.Println(dp_fib2(5))
-}
-
 func TestLIS(t *testing.T) {
 	fmt.Println(lengthOfLIS([]int{10, 9, 2, 5, 3, 7, 101, 18}))
+}
+
+func TestFib(t *testing.T) {
+	fmt.Println(fib_memo(5))
+	fmt.Println(fib_dp_table(6))
 }
