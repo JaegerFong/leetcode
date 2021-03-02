@@ -8,7 +8,10 @@ import (
 func TestCoinChange(t *testing.T) {
 	coins := []int{1, 2, 5}
 	amount := 11
-	fmt.Println(coinChange2(coins, amount))
+	//fmt.Println(coinChange2(coins, amount))
+
+	fmt.Println(coinChangeIteration(coins, amount))
+
 }
 
 func TestLIS(t *testing.T) {
