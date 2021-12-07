@@ -22,3 +22,13 @@ func TestFib(t *testing.T) {
 	fmt.Println(fib_memo(5))
 	fmt.Println(fib_dp_table(6))
 }
+
+func TestCoinchange(t *testing.T) {
+	c := []int{1, 2, 5}
+	t.Log(coinchange(c, 11))
+}
+
+func TestLis(t *testing.T) {
+	arr := []int{1, 4, 3, 4, 2, 3}
+	t.Log(lis(arr))
+}
