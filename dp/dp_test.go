@@ -32,3 +32,11 @@ func TestLis(t *testing.T) {
 	arr := []int{1, 4, 3, 4, 2, 3}
 	t.Log(lis(arr))
 }
+
+func TestPack01(t *testing.T) {
+	w := 3
+	n := 4
+	wt := []int{2, 1, 3}
+	val := []int{4, 2, 3}
+	t.Log(pkdp(w, n, wt, val))
+}

@@ -3,6 +3,7 @@
  *
  * [53] 最大子序和
  */
+package dp
 
 // @lc code=start
 func maxSubArray(nums []int) int {
@@ -24,14 +25,6 @@ func maxSubArray(nums []int) int {
 	}
 
 	return res
-}
-
-func max(i, j int) int {
-	if i > j {
-		return i
-	}
-
-	return j
 }
 
 // nums

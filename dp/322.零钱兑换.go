@@ -24,6 +24,8 @@ func coinChange(coins []int, amount int) int {
 			dp[i] = min(dp[i], dp[r]+1)
 		}
 	}
+
+	return dp[amount]
 }
 
 // @lc code=end
