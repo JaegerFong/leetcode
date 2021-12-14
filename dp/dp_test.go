@@ -36,7 +36,32 @@ func TestLis(t *testing.T) {
 func TestPack01(t *testing.T) {
 	w := 3
 	n := 4
-	wt := []int{2, 1, 3}
-	val := []int{4, 2, 3}
+	wt := []int{2, 1, 3, 4}
+	val := []int{4, 2, 3, 4}
 	t.Log(pkdp(w, n, wt, val))
+}
+
+func TestVector(t *testing.T) {
+	n := 3
+	sum := 4
+	dp := make([][]bool, n)
+
+	// 初始化base case
+	for i := 0; i < n; i++ {
+		item := make([]bool, sum)
+		dp[i] = append(dp[i], item...)
+		for j := 0; j < sum; j++ {
+			// weight==0,true
+			if j == 0 {
+				dp[i][j] = true
+				break
+			}
+		}
+	}
+
+	for i := 0; i < n; i++ {
+		for j := 0; j < sum; j++ {
+			t.Log(dp[i][j])
+		}
+	}
 }

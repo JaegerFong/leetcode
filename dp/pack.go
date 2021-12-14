@@ -9,10 +9,10 @@ package dp
 // wt[i-1]代表当前物品的重量，val[i-1]代表当前物品的价值
 // dp[i-1][ w- wt[i-1] ] + val(i-1) 的含义：前一个物品的最大价值 + 当前物品的价值
 func pkdp(W, N int, wt, val []int) int {
+	// 1~3  0,1,2,3
 	dp := make([][]int, N+1)
-
 	for i := 0; i <= N; i++ {
-		dp[i] = make([]int, W+1)
+		dp[i] = append(dp[i], make([]int, W+1)...)
 		for w := 0; w <= W; w++ {
 			dp[i][w] = 0
 		}
