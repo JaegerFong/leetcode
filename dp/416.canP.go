@@ -2,7 +2,6 @@ package dp
 
 // 416 0-1背包变种，无状态压缩
 func cpdp(nums []int) bool {
-
 	var sum int
 	for _, v := range nums {
 		sum += v
