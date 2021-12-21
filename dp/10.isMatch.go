@@ -50,7 +50,28 @@ func imdp(s, p string, i, j int) bool {
 //		return false
 
 func imdp2(s, p string, i, j int) bool {
-	n := len(p)
+	m, n := len(s), len(p)
+
+	// base case
+	// case 1: p字符串走完,判断s是否完成
+	if j == n {
+		return i == m
+	}
+
+	// case 2:
+	if i == m {
+		if (n-j)%2 == 1 {
+			return false
+		}
+
+		for ; j+1 < n; j += 2 {
+			if p[j+1] != '*' {
+				return false
+			}
+		}
+		return true
+	}
+
 	if s[i] == p[j] || p[j] == '.' {
 		if j < n-1 && p[j+1] == '*' {
 			return imdp2(s, p, i, j+2) ||
