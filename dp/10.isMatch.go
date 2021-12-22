@@ -86,7 +86,6 @@ func imdp2(s, p string, i, j int) bool {
 			return false
 		}
 	}
-
 }
 
 //
