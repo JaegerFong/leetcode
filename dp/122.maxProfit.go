@@ -1,7 +1,33 @@
 package dp
 
-func maxProfit2() {
+func maxProfit1(prices []int) int {
+	pl := len(prices)
+	// TODO: DP备忘录
+	var dp func(int) int
+	dp = func(start int) int {
 
+		// 数组越界
+		if start >= pl {
+			return 0
+		}
+
+		minBuy := prices[start]
+		res := 0
+		for i := start + 1; i < pl; i++ {
+			minBuy = min(minBuy, prices[start])
+
+			curProfit := prices[i] - minBuy
+
+			// 下一天继续计算
+			restProfit := dp(start + 1)
+
+			res = max(res, restProfit+curProfit)
+		}
+
+		return res
+	}
+
+	return dp(0)
 }
 
 // 动态规划：二次循环递归
@@ -19,29 +45,6 @@ func mp2dp(prices []int) int {
 	}
 
 	return res
-}
-
-// 一次循环递归
-func mp2dp1(prices []int) int {
-
-	profit := 0
-	pl := len(prices)
-	minBuy := prices[0]
-	for i := 1; i < pl; i++ {
-		// 当天买入点和历史最低买入点比较,取最小值
-		minBuy := min(minBuy, prices[i])
-
-		// 当天卖价格 - 历史最低买入价格
-		curProfit := prices[i] - minBuy
-
-		// 剩余最大收益 = 递归获取i+1后的数据
-		restMaxProfit := mp2dp1(prices[i+1:])
-
-		// 取最大收益
-		profit = max(profit, curProfit+restMaxProfit)
-	}
-
-	return profit
 }
 
 // 最优解，贪心算法

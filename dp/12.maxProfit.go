@@ -2,7 +2,7 @@ package dp
 
 // 买卖一次，获益最大 => 买入最低，卖出最高
 // 每次只需找到最低的买入点，以及计算 (当前卖出点-最低卖出点)和历史最高收益比较
-func maxProfit(prices []int) int {
+func maxProfit0(prices []int) int {
 
 	// 默认最大收益为0
 	profit := 0

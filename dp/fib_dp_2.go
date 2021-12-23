@@ -43,7 +43,7 @@ var coins []int
 // 递归
 // @param amt
 // @return int count
-func dp(amt int) int {
+func cdp(amt int) int {
 	if amt == 0 {
 		return 0
 	}
@@ -56,10 +56,10 @@ func dp(amt int) int {
 	for idx, v := range coins {
 		// choose v
 		if idx == 0 {
-			basemin = dp(amt-v) + 1
+			basemin = cdp(amt-v) + 1
 		}
 
-		basemin = min(basemin, dp(amt-v)+1)
+		basemin = min(basemin, cdp(amt-v)+1)
 	}
 
 	return 0
