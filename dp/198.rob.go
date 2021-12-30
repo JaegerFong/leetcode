@@ -1,8 +1,10 @@
 package dp
 
+//
 func rob(nums []int) int {
 
 	nl := len(nums)
+	// 扩充2
 	dp := make([]int, nl+2)
 	for i := nl - 1; i >= 0; i-- {
 		dp[i] = max(
@@ -15,8 +17,7 @@ func rob(nums []int) int {
 
 // 状态：idx
 // 选择: rob || no rob
-// dp(nums,idx) = x
-// dp(nums,idx) = max( dp(nums,idx+1), nums[idx]+dp(nums,idx+2) )
+// 递归
 func robdp(nums []int, start int) int {
 	if start > len(nums) {
 		return 0
