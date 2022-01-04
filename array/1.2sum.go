@@ -5,15 +5,38 @@ func twoSumn(nums []int, target int) []int {
 	nl := len(nums)
 	l := 0
 	r := nl - 1
+
 	for l < r {
-		s := nums[l] + nums[r]
-		if s < target {
-			l++
-			continue
-		} else if s > target {
-			r--
-			continue
+		left := nums[l]
+		right := nums[r]
+		sum := left + right
+
+		if sum < target {
+
+			// 跳过相同的数
+			for l < r && nums[l] == left {
+				l++
+			}
+
+		} else if sum > target {
+
+			// 跳过相同的数
+			for l < r && nums[r] == right {
+				r--
+			}
+
 		} else {
+
+			// 跳过相同的数
+			for l < r && nums[l] == left {
+				l++
+			}
+
+			// 跳过相同的数
+			for l < r && nums[r] == right {
+				r--
+			}
+
 			break
 		}
 	}
