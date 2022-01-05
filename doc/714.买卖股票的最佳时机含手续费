@@ -1,3 +1,5 @@
+package doc
+
 /*
  * @lc app=leetcode.cn id=714 lang=golang
  *
@@ -8,5 +10,5 @@
 func maxProfit(prices []int, fee int) int {
 
 }
-// @lc code=end
 
+// @lc code=end

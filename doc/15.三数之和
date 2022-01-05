@@ -1,3 +1,5 @@
+package doc
+
 /*
  * @lc app=leetcode.cn id=15 lang=golang
  *
@@ -8,5 +10,5 @@
 func threeSum(nums []int) [][]int {
 
 }
-// @lc code=end
 
+// @lc code=end

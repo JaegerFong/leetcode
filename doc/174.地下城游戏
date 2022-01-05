@@ -1,3 +1,5 @@
+package doc
+
 /*
  * @lc app=leetcode.cn id=174 lang=golang
  *
@@ -10,4 +12,3 @@ func calculateMinimumHP(dungeon [][]int) int {
 }
 
 // @lc code=end
-

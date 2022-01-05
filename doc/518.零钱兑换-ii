@@ -1,3 +1,5 @@
+package doc
+
 /*
  * @lc app=leetcode.cn id=518 lang=golang
  *
@@ -10,4 +12,3 @@ func change(amount int, coins []int) int {
 }
 
 // @lc code=end
-

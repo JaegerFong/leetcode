@@ -1,3 +1,5 @@
+package doc
+
 /*
  * @lc app=leetcode.cn id=787 lang=golang
  *
@@ -8,5 +10,5 @@
 func findCheapestPrice(n int, flights [][]int, src int, dst int, k int) int {
 
 }
-// @lc code=end
 
+// @lc code=end
