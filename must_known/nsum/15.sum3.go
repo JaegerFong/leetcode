@@ -1,4 +1,4 @@
-package array
+package nsum
 
 func threeSum(nums []int) [][]int {
 

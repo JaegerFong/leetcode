@@ -1,4 +1,4 @@
-package array
+package nsum
 
 func fourSum(nums []int, target int) [][]int {
 	return nSum(nums, 4, 0, target)

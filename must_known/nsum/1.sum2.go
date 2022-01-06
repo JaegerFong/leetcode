@@ -1,4 +1,4 @@
-package array
+package nsum
 
 // 双指针
 func twoSumn(nums []int, target int) []int {

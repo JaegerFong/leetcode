@@ -1,0 +1,12 @@
+/*
+ * @lc app=leetcode.cn id=1288 lang=golang
+ *
+ * [1288] 删除被覆盖区间
+ */
+
+// @lc code=start
+func removeCoveredIntervals(intervals [][]int) int {
+
+}
+// @lc code=end
+

@@ -1,4 +1,4 @@
-package array
+package nsum
 
 // 两数之和
 // 解法一：暴力循环
