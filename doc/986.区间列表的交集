@@ -1,0 +1,13 @@
+/*
+ * @lc app=leetcode.cn id=986 lang=golang
+ *
+ * [986] 区间列表的交集
+ */
+
+// @lc code=start
+func intervalIntersection(firstList [][]int, secondList [][]int) [][]int {
+
+}
+
+// @lc code=end
+
